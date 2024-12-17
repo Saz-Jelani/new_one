@@ -37,7 +37,7 @@
                                         <table class="table all-package theme-table table-product" id="table_id">
                                             <thead>
                                             <tr>
-                                                <th class="wd-15p border-bottom-0">SL NO</th>
+                                                <th class="wd-15p border-bottom-0">Order NO</th>
                                                 <th class="wd-15p border-bottom-0">Customer Info</th>
                                                 <th class="wd-15p border-bottom-0">Order Date</th>
                                                 <th class="wd-20p border-bottom-0">Order Total</th>
@@ -49,8 +49,10 @@
                                             <tbody>
                                             @foreach($orders as $order)
                                                 <tr>
-                                                    <td>{{$loop->iteration}}</td>
+                                                    
+                                                    <td>{{$order->id}}</td>
                                                     <td>{{$order->customer->name.'( '.$order->customer->mobile.' )'}}</td>
+                
                                                     <td>{{$order->order_date}}</td>
                                                     <td>{{$order->order_total}}</td>
                                                     <td>{{$order->order_status}}</td>

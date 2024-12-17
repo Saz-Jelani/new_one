@@ -75,7 +75,7 @@
                     <div class="slider-5_1 no-space shop-box no-arrow">
                         <div>
                             <div class="shop-category-box">
-                                <a href="shop-left-sidebar.html">
+                                <a href="{{asset('/')}}product-category/82">
                                     <div class="shop-category-image">
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" class="blur-up lazyload" alt="">
                                     </div>
@@ -88,7 +88,7 @@
 
                         <div>
                             <div class="shop-category-box">
-                                <a href="shop-left-sidebar.html">
+                                <a href="http://localhost:8080/new_one/public/product-category/85">
                                     <div class="shop-category-image">
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" class="blur-up lazyload" alt="">
                                     </div>
@@ -101,7 +101,7 @@
 
                         <div>
                             <div class="shop-category-box">
-                                <a href="shop-left-sidebar.html">
+                                <a href="http://localhost:8080/new_one/public/product-category/86">
                                     <div class="shop-category-image">
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" class="blur-up lazyload" alt="">
                                     </div>
@@ -114,7 +114,7 @@
 
                         <div>
                             <div class="shop-category-box">
-                                <a href="shop-left-sidebar.html">
+                                <a href="http://localhost:8080/new_one/public/product-category/84">
                                     <div class="shop-category-image">
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" class="blur-up lazyload" alt="">
                                     </div>
@@ -127,7 +127,7 @@
 
                         <div>
                             <div class="shop-category-box">
-                                <a href="shop-left-sidebar.html">
+                                <a href="http://localhost:8080/new_one/public/product-category/88">
                                     <div class="shop-category-image">
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" class="blur-up lazyload" alt="">
                                     </div>
@@ -140,7 +140,7 @@
 
                         <div>
                             <div class="shop-category-box">
-                                <a href="shop-left-sidebar.html">
+                                <a href="http://localhost:8080/new_one/public/product-category/83">
                                     <div class="shop-category-image">
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" class="blur-up lazyload" alt="">
                                     </div>
@@ -248,12 +248,14 @@
 
                         <div class="product-package">
                             <div class="product-title">
-                                <h4>Quantity</h4>
+                                <h4>Quantity ({{$product->unit->name}})</h4>
+                               
                             </div>
                             <ul name="qty" class="select-package">
                                 <div class="form-group quantity">
                                     <input type="number" name="qty" class="form-control" value="1" min="1"/>
                                 </div>
+                                <!-- <p>{{$product->unit->name}}</p> -->
                             </ul>
                         </div>
                         <div class="note-box product-package">
@@ -261,17 +263,6 @@
                                     class="btn btn-md bg-dark cart-button text-white w-100">Add To Cart</button>
                         </div>
 
-                        <div class="buy-box">
-                            <a href="wishlist.html">
-                                <i data-feather="heart"></i>
-                                <span>Add To Wishlist</span>
-                            </a>
-
-                            <a href="compare.html">
-                                <i data-feather="shuffle"></i>
-                                <span>Add To Compare</span>
-                            </a>
-                        </div>
 
                         <div class="payment-option">
                             <div class="product-title">
@@ -323,10 +314,10 @@
                                         data-bs-target="#description" type="button" role="tab">Description</button>
                             </li>
 
-                            <li class="nav-item" role="presentation">
+                            <!-- <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="info-tab" data-bs-toggle="tab" data-bs-target="#info"
                                         type="button" role="tab">Additional info</button>
-                            </li>
+                            </li> -->
 
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="care-tab" data-bs-toggle="tab" data-bs-target="#care"
@@ -346,7 +337,7 @@
                                         <p>{!!$product->long_description !!}</p>
                                     </div>
 
-                                    <div class="nav-desh">
+                                    <!-- <div class="nav-desh">
                                         <div class="desh-title">
                                             <h5>Organic:</h5>
                                         </div>
@@ -361,7 +352,7 @@
                                             imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper
                                             malesuada proin libero nunc consequat interdum varius sit amet mattis
                                             vulputate enim nulla aliquet porttitor lacus luctus accumsan.</p>
-                                    </div>
+                                    </div> -->
 
                                     <div class="banner-contain nav-desh">
                                         <img src="{{asset('/')}}front-end-assets/assets/images/vegetable/banner/14.jpg"
@@ -377,7 +368,7 @@
                                 </div>
                             </div>
 
-                            <div class="tab-pane fade" id="info" role="tabpanel">
+                            <!-- <div class="tab-pane fade" id="info" role="tabpanel">
                                 <div class="table-responsive">
                                     <table class="table info-table">
                                         <tbody>
@@ -416,18 +407,18 @@
                                         </tbody>
                                     </table>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <div class="tab-pane fade" id="care" role="tabpanel">
                                 <div class="information-box">
                                     <ul>
-                                        <li>Store cream cakes in a refrigerator. Fondant cakes should be
+                                        <li>Store this product in a refrigerator.This should be
                                             stored in an air conditioned environment.</li>
 
-                                        <li>Slice and serve the cake at room temperature and make sure
+                                        <li>Slice and serve the product at room temperature and make sure
                                             it is not exposed to heat.</li>
 
-                                        <li>Use a serrated knife to cut a fondant cake.</li>
+                                        <li>Use a serrated knife to cut a Product.</li>
 
                                         <li>Sculptural elements and figurines may contain wire supports
                                             or toothpicks or wooden skewers for support.</li>
@@ -435,9 +426,9 @@
                                         <li>Please check the placement of these items before serving to
                                             small children.</li>
 
-                                        <li>The cake should be consumed within 24 hours.</li>
+                                        <li>The product should be consumed within 72 hours.</li>
 
-                                        <li>Enjoy your cake!</li>
+                                        <li>Enjoy your product!</li>
                                     </ul>
                                 </div>
                             </div>
@@ -658,7 +649,8 @@
                                                                                        class="fill"></i>
                                                                                 </li>
                                                                                 <li>
-                                                                                    <i data-feather="star"></i>
+                                                                                    <i data-feather="star"
+                                                                                      class="fill"></i>
                                                                                 </li>
                                                                             </ul>
                                                                         </div>
@@ -787,7 +779,7 @@
 
     <!-- Related Product Section Start -->
     <section class="product-list-section section-b-space">
-        <div class="container-fluid-lg">
+        <!-- <div class="container-fluid-lg">
             <div class="title">
                 <h2>Related Products</h2>
                 <span class="title-leaf">
@@ -1412,7 +1404,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     <!-- Related Product Section End -->
 

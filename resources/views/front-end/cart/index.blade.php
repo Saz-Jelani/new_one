@@ -82,6 +82,13 @@
                                 <tbody>
                                 @php($sum=0)
                                 @foreach($cart_products as $cart_product)
+
+                                <php? 
+
+                                print_r($cart_products);
+                                exit;
+                                
+                                ?>
                                 <tr class="product-box-contain">
                                     <td class="product-detail">
                                         <div class="product border-0">
@@ -94,6 +101,7 @@
                                                     <li class="name">
                                                         <a href="product-left-thumbnail.html">{{$cart_product->name}}</a>
                                                     </li>
+                                                  
 
                                                     <li class="text-content"><span class="text-title">Code : </span> {{$cart_product->options->code}}</li>
 
@@ -109,13 +117,18 @@
                                     </td>
 
                                     <td class="quantity">
-                                        <h4 class="table-title text-content">Qty</h4>
+                                        <h4 class="table-title text-content">Quantity Per </h4>  
+                                        <h5 class="table-title text-content">(kg/litter/dozen) </h5>                   
                                         <div class="col-md-2 col-12">
                                             <form action="{{route('cart.update', ['row_id' => $cart_product->rowId])}}" method="POST">
                                                 @csrf
                                                 <div class="input-group">
                                                     <input type="number" class="form-control" name="qty" value="{{$cart_product->qty}}" min="1"/>
+                                                    <li>
                                                     <button type="submit" class="  btn-success btn-lg " >Update</button>
+                                                    </li>
+                                      
+                                                    
                                                 </div>
                                             </form>
                                         </div>
@@ -128,7 +141,7 @@
 
                                     <td class="save-remove">
                                         <h4 class="table-title text-content">Action</h4>
-                                        <a class="save notifi-wishlist" href="javascript:void(0)">Save for later</a>
+                                        <!-- <a class="save notifi-wishlist" href="javascript:void(0)">Save for later</a> -->
                                         <a class="remove close_button" href="{{route('cart.delete', ['row_id' => $cart_product->rowId])}}" onclick="return confirm('Are you sure to delete this item..')"><i class="lni lni-close"></i>Remove</a>
                                     </td>
                                 </tr>
@@ -148,14 +161,14 @@
                         </div>
 
                         <div class="summery-contain">
-                            <div class="coupon-cart">
+                            <!-- <div class="coupon-cart">
                                 <h6 class="text-content mb-2">Coupon Apply</h6>
                                 <div class="mb-3 coupon-box input-group">
                                     <input type="email" class="form-control" id="exampleFormControlInput1"
                                            placeholder="Enter Coupon Code Here...">
                                     <button class="btn-apply">Apply</button>
                                 </div>
-                            </div>
+                            </div> -->
                             <ul>
 
                                 <li>
@@ -164,19 +177,16 @@
                                 </li>
 
                                 <li class="align-items-start">
-                                    <h4>Shipping</h4>
-                                    <h4 class="price text-end">{{$shipping = 100}} Tk</h4>
+                                    <h4>Delivery Charge</h4>
+                                    <h4 class="price text-end">{{$shipping = 50}} Tk</h4>
                                 </li>
 
                                 <li>
-                                    <h4>Tax Total (15%)</h4>
-                                    <h4 class="price">{{$tax = round($sum*0.15)}} Tk</h4>
+                                    <h4>Vat (5%)</h4>
+                                    <h4 class="price">{{$tax = round($sum*0.05)}} Tk</h4>
                                 </li>
 
-                                <li>
-                                    <h4>Coupon Discount</h4>
-                                    <h4 class="price">(-) 0.00 Tk</h4>
-                                </li>
+                              
                             </ul>
 
                         </div>

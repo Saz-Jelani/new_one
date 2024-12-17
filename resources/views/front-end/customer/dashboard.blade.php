@@ -70,8 +70,8 @@
                                                                     <td>{{ $order->order_total }} Tk</td>
                                                                     <td>{{ $order->order_status }}</td>
                                                                     <td>
-                                                                        [<a href="">invoice</a>]
-                                                                        [<a href="">Details</a>]
+                                                                        [<a href="{{route('order.invoice', ['id' => $order->id])}}">Details</a>]
+                                            
                                                                     </td>
                                                                 </tr>
                                                             @endforeach

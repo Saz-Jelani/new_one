@@ -34,68 +34,58 @@
                         <div class="shop-left-sidebar">
                             <ul class="nav nav-pills mb-3 custom-nav-tab" id="pills-tab" role="tablist">
 
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="pills-vegetables" data-bs-toggle="pill"
-                                            data-bs-target="#pills-vegetable" type="button" role="tab">Vegetables & Fruit
+                                <li class="nav-item " role="presentation">
+                                    <button onclick="location.href = '{{asset('/')}}product-category/82';" class="nav-link active " id="pills-vegetables" data-bs-toggle="pill"
+                                            data-bs-target="#pills-vegetable" type="button" role="tab">Fresh Product
                                         <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" class="blur-up lazyload"
                                              alt=""></button>
                                 </li>
 
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link " id="pills-beverages" data-bs-toggle="pill"
-                                            data-bs-target="#pills-beverages" type="button" role="tab">Beverages <img
-                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/cup.svg" class="blur-up lazyload"
+                                    <button  onclick="location.href = '{{asset('/')}}product-category/83';" class="nav-link  " id="pills-beverages" data-bs-toggle="pill"
+                                            data-bs-target="#pills-beverages" type="button" role="tab">Dairy & Eggs <img
+                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" class="blur-up lazyload"
                                             alt=""></button>
                                 </li>
 
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-meat" data-bs-toggle="pill"
-                                            data-bs-target="#pills-meat" type="button" role="tab">Meats & Seafood <img
-                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" alt="" class="blur-up lazyload"></button>
+                                    <button onclick="location.href = '{{asset('/')}}product-category/84';" class="nav-link active " id="pills-meat" data-bs-toggle="pill"
+                                            data-bs-target="#pills-meat" type="button" role="tab">Bakery <img
+                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" alt="" class="blur-up lazyload"></button>
                                 </li>
 
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-dairy" data-bs-toggle="pill"
-                                            data-bs-target="#pills-dairy" type="button" role="tab">Breakfast & Dairy <img
-                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/breakfast.svg" class="blur-up lazyload"
+                                    <button onclick="location.href = '{{asset('/')}}product-category/85';" class="nav-link " id="pills-dairy" data-bs-toggle="pill"
+                                            data-bs-target="#pills-dairy" type="button" role="tab">Beverages <img
+                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/drink.svg" class="blur-up lazyload"
                                             alt=""></button>
                                 </li>
 
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-frozen" data-bs-toggle="pill"
-                                            data-bs-target="#pills-frozen" type="button" role="tab">Frozen Foods <img
-                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" class="blur-up lazyload" alt=""></button>
+                                    <button onclick="location.href = '{{asset('/')}}product-category/86';" class="nav-link active " id="pills-frozen" data-bs-toggle="pill"
+                                            data-bs-target="#pills-frozen" type="button" role="tab">Meat & Seafood <img
+                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/meats.svg" class="blur-up lazyload" alt=""></button>
                                 </li>
 
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-snack" data-bs-toggle="pill"
-                                            data-bs-target="#pills-snack" type="button" role="tab">Biscuits & Snacks <img
-                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/biscuit.svg" class="blur-up lazyload" alt=""></button>
-                                </li>
-
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-grocery" data-bs-toggle="pill"
-                                            data-bs-target="#pills-grocery" type="button" role="tab">Grocery & Staples <img
+                                <li class="nav-item active" role="presentation">
+                                    <button  onclick="location.href = '{{asset('/')}}product-category/87';" class="nav-link " id="pills-snack" data-bs-toggle="pill"
+                                            data-bs-target="#pills-snack" type="button" role="tab">Pantry Staples <img
                                             src="https://themes.pixelstrap.com/fastkart/assets/svg/1/grocery.svg" class="blur-up lazyload" alt=""></button>
                                 </li>
 
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-wines" data-bs-toggle="pill"
-                                            data-bs-target="#pills-wines" type="button" role="tab">Wines & Alcohol Drinks
-                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/drink.svg" class="blur-up lazyload" alt=""></button>
+                                    <button onclick="location.href = '{{asset('/')}}product-category/88';" class="nav-link active" id="pills-grocery" data-bs-toggle="pill"
+                                            data-bs-target="#pills-grocery" type="button" role="tab">Frozen Foods <img
+                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/frozen.svg" class="blur-up lazyload" alt=""></button>
                                 </li>
 
                                 <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-milk" data-bs-toggle="pill"
-                                            data-bs-target="#pills-milk" type="button" role="tab">Milk & Dairies <img
-                                            src="https://themes.pixelstrap.com/fastkart/assets/svg/1/milk.svg" alt="" class="blur-up lazyload"></button>
+                                    <button onclick="location.href = '{{asset('/')}}product-category/89';" class="nav-link " id="pills-wines" data-bs-toggle="pill"
+                                            data-bs-target="#pills-wines" type="button" role="tab">Snacks & Sweets
+                                        <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/biscuit.svg" class="blur-up lazyload" alt=""></button>
                                 </li>
 
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="pills-pet" data-bs-toggle="pill"
-                                            data-bs-target="#pills-pet" type="button" role="tab">Pet Foods <img
-                                            class="blur-up lazyload" src="https://themes.pixelstrap.com/fastkart/assets/svg/1/pet.svg" alt=""></button>
-                                </li>
+                              
                             </ul>
                         </div>
                     </div>
@@ -184,7 +174,7 @@
                                                  class="img-fluid blur-up lazyload" alt="">
                                         </a>
 
-                                        <ul class="product-option">
+                                        <!-- <ul class="product-option">
                                             <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
                                                 <a href="{{route('product-detail', ['id' => $product->id])}}" data-bs-toggle="modal"
                                                    data-bs-target="#view">
@@ -203,20 +193,21 @@
                                                     <i data-feather="heart"></i>
                                                 </a>
                                             </li>
-                                        </ul>
+                                        </ul> -->
                                     </div>
                                 </div>
                                 <div class="product-footer">
                                     <div class="product-detail">
-                                        <span class="span-name">{{$product->category->name}}</span>
+                                        
                                         <h3>
                                         <a href="{{route('product-detail', ['id' => $product->id])}}">{{$product->name}}
                                         </a></h3>
                                         <p class="text-content mt-1 mb-2 product-content">Cheesy feet cheesy grin brie.
                                             Mascarpone cheese and wine hard cheese the big cheese everyone loves smelly
                                             cheese macaroni cheese croque monsieur.</p>
-
-                                        <h7 class="unit">250 ml</h7>
+<ul>
+                                        <h7 class="unit"></h7></ul>
+                                        <span class="span-name">{{$product->category->name}}</span>
                                         <h6 class="price">Regular Price : <del>{{$product->regular_price}} Tk</del>
                                         </h6>
                                         <h3>

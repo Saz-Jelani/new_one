@@ -31,6 +31,7 @@ class CheckOutController extends Controller
     {
         if (Session::get('customer_id')) {
             $this->customer = Customer::find(Session::get('customer_id'));
+            
         } else {
 
             $this->customer = Customer::where('email', $request->email)->orWhere('mobile', $request->mobile)->first();
@@ -73,22 +74,27 @@ class CheckOutController extends Controller
 
 
             /* Email Send */
-
-            $title = 'Welcome to our website';
-            $body = 'Thank you for your order!';
+            $title  = $this->customer->name;
+            $body = $this->order->id;
             Mail::to($this->customer->email)
-                ->send(new OrderConfirmationMail($title, $body));
+                ->send(new OrderConfirmationMail( $title, $body));
 
             /* Email Send */
 
             return redirect('/complete-order')
                 ->with('message', 'Congratulation ...
                 your order info post successfully. Please wait..
-                we will contact with you soon.');
-        } elseif ($request->payment_method == 'Online') {
+                we will contact with you soon C.');
+        }
+        
+        
+        elseif ($request->payment_method == 'Online') {
+            
             $sslCommerez = new SslCommerzPaymentController();
             $sslCommerez->index($request, $this->customer);
+
         }
+        
     }
 
     public function completeOrder()

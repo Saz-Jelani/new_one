@@ -115,9 +115,8 @@
                         </td>
 
                         <td>
-                            Invoice #: 00{{$order->id}}<br />
+                            Order No: 00{{$order->id}}<br />
                             Order Date: {{ $order->order_date }}<br />
-                            {{--                                                Invoice Date: {{ \Carbon\Carbon::now()->format('Y-m-d') }}--}}
                             Invoice Date: {{ date('Y-m-d') }}
                         </td>
                     </tr>
@@ -131,19 +130,19 @@
                     <tr>
                         <td>
                             <h4>Delivery Address</h4>
-                            {{ $order->customer->name }}<br/>
-                            {{ $order->customer->mobile }}<br/>
-                            {{ $order->customer->email }}<br/>
-                            {{ $order->delivery_address }}<br/>
+                            Name : {{ $order->customer->name }}<br/>
+                            Number : {{ $order->customer->mobile }}<br/>
+                            Mail : {{ $order->customer->email }}<br/>
+                            Address : {{ $order->delivery_address }}<br/>
                         </td>
 
                         <td>
 
                             <h4>Company Info</h4>
-                           Fastkart Corporation<br/>
+                            Alugajor.com Corporation<br/>
                             Dhaka<br />
                             01747534818<br />
-                            fastkartm@example.com
+                            alugajor@example.com
                         </td>
                     </tr>
                 </table>
@@ -166,6 +165,7 @@
             <td align="center">Product Name</td>
             <td align="center">Unit Price</td>
             <td align="center">Quantity</td>
+         
             <td align="right">Sub Total</td>
         </tr>
 
@@ -177,7 +177,9 @@
                 <td align="center">{{ $loop->iteration }}</td>
                 <td align="center">{{ $orderDetail->product_name }}</td>
                 <td align="center">{{ $orderDetail->product_price }}</td>
-                <td align="center">{{ $orderDetail->product_qty }}</td>
+                <td align="center">{{ $orderDetail->product_qty }}
+               
+                </td>
                 <td align="center">{{ $total = $orderDetail->product_qty * $orderDetail->product_price }} /-</td>
             </tr>
             @php
@@ -201,7 +203,7 @@
             <td></td>
 
             <td align="center"></td>
-            <td align="right">Tax: {{ round($tax = $sum*0.15) }} Tk.</td>
+            <td align="right">Tax: {{ round($tax = $sum*0.05) }} Tk.</td>
         </tr>
 
         <tr class="total">
@@ -209,7 +211,7 @@
             <td></td>
 
             <td align="center"></td>
-            <td align="center">Shipping Cost: {{ $shipping = 100 }} Tk.</td>
+            <td align="center">Shipping Cost: {{ $shipping = 50 }} Tk.</td>
         </tr>
         <tr class="total">
             <td></td>

@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
-    <link rel="icon" href="{{asset('/')}}front-end-assets/assets/images/favicon/1.png" type="image/x-icon">
-    <title>FastKart @yield('title')</title>
+    <link rel="icon" href="{{asset('/')}}front-end-assets/assets/images/favicon/801.png" type="image/x-icon">
+    <title>AluGajor.com @yield('title')</title>
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com/">
@@ -153,7 +153,7 @@
 
 
 
-     <div class="top-nav top-header sticky-header sticky-header-3" >
+     <div class="top-nav top-header sticky-header sticky-header-1" >
         <div class="container-fluid-lg">
             <div class="row">
                 <div class="col-12">
@@ -165,8 +165,9 @@
                                 </span>
                         </button>
                         <a href="{{route('home')}}" class="web-logo nav-logo">
-                            <img src="{{asset('/')}}front-end-assets/assets/images/logo/1.png" class="img-fluid blur-up lazyload" alt="">
+                            <img src="{{asset('/')}}front-end-assets/assets/images/logo/525.png" class="img-fluid blur-up lazyload" alt="">
                         </a>
+        
 
                         <div class="middle-box">
                             <div class="location-box">
@@ -203,7 +204,7 @@
                                 </div>
                             </div>
                             <ul class="right-side-menu">
-                                <li class="right-side">
+                                <!-- <li class="right-side">
                                     <div class="delivery-login-box">
                                         <div class="delivery-icon">
                                             <div class="search-box">
@@ -211,7 +212,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </li>
+                                </li> -->
                                 <li class="right-side">
                                     <a href="contact-us.html" class="delivery-login-box">
                                         <div class="delivery-icon">
@@ -382,7 +383,6 @@
                                                     </li>
                                                 @endforeach
                                             </ul>
-
                                                 </div>
                                             </div>
                                         @endif
@@ -596,7 +596,7 @@
                                                         <div class="dropdown-column m-0">
                                                             <div class="menu-img-banner">
                                                                 <a class="text-title" href="product-circle.html">
-                                                                    <img src="{{asset('/')}}front-end-assets5/assets/images/mega-menu.png"
+                                                                    <img src="{{asset('/')}}front-end-assets/assets/images/mega-menu.png"
                                                                          alt="banner">
                                                                 </a>
                                                             </div>
@@ -1942,7 +1942,7 @@
                             </div>
 
                             <div class="service-detail">
-                                <h5>Every Fresh Products</h5>
+                                <h5> Daily Fresh Products  </h5>
                             </div>
                         </div>
 
@@ -1952,7 +1952,7 @@
                             </div>
 
                             <div class="service-detail">
-                                <h5>Free Delivery For Order Over $50</h5>
+                                <h5>Fastest Delivery</h5>
                             </div>
                         </div>
 
@@ -1986,114 +1986,48 @@
                     <div class="footer-logo">
                         <div class="theme-logo">
                             <a href="index.html">
-                                <img src="{{asset('/')}}front-end-assets/assets/images/logo/2.png" class="blur-up lazyload" alt="">
+                                <img src="{{asset('/')}}front-end-assets/assets/images/logo/525.png" class="blur-up lazyload" alt="">
                             </a>
                         </div>
 
-                        <div class="footer-logo-contain">
-                            <p>We are a friendly bar serving a variety of cocktails, wines and beers. Our bar is a
-                                perfect place for a couple.</p>
+                       
+                    </div>
+                </div>
+<!-- 
+                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
+                    <div class="footer-title">
+                       
+                    </div>
 
-                            <ul class="address">
+                    <div class="footer-contain">
+                        <ul>
+                     
+                        </ul>
+                    </div>
+                </div> -->
+
+                <div class="col-xl-3 col-lg-4 col-sm-6">
+                <div class="footer-title">
+                        <h4>Address</h4>
+                    </div>
+
+                    <div class="footer-contain">
+                    <ul class="address">
                                 <li>
                                     <i data-feather="home"></i>
-                                    <a href="javascript:void(0)">1418 Riverwood Drive, CA 96052, US</a>
+                                    <a href="javascript:void(0)">Arambag, Motijheel</a>
                                 </li>
                                 <li>
                                     <i data-feather="mail"></i>
-                                    <a href="javascript:void(0)">support@fastkart.com</a>
+                                    <a href="javascript:void(0)">support@alugajor.com</a>
                                 </li>
                             </ul>
-                        </div>
                     </div>
-                </div>
-
-                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6">
-                    <div class="footer-title">
-                        <h4>Categories</h4>
-                    </div>
-
-                    <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Vegetables & Fruit</a>
-                            </li>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Beverages</a>
-                            </li>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Meats & Seafood</a>
-                            </li>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Frozen Foods</a>
-                            </li>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Biscuits & Snacks</a>
-                            </li>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Grocery & Staples</a>
-                            </li>
-                        </ul>
-                    </div>
+                
                 </div>
 
                 <div class="col-xl col-lg-2 col-sm-3">
-                    <div class="footer-title">
-                        <h4>Useful Links</h4>
-                    </div>
-
-                    <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="index.html" class="text-content">Home</a>
-                            </li>
-                            <li>
-                                <a href="shop-left-sidebar.html" class="text-content">Shop</a>
-                            </li>
-                            <li>
-                                <a href="about-us.html" class="text-content">About Us</a>
-                            </li>
-                            <li>
-                                <a href="blog-list.html" class="text-content">Blog</a>
-                            </li>
-                            <li>
-                                <a href="contact-us.html" class="text-content">Contact Us</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-2 col-sm-3">
-                    <div class="footer-title">
-                        <h4>Help Center</h4>
-                    </div>
-
-                    <div class="footer-contain">
-                        <ul>
-                            <li>
-                                <a href="order-success.html" class="text-content">Your Order</a>
-                            </li>
-                            <li>
-                                <a href="user-dashboard.html" class="text-content">Your Account</a>
-                            </li>
-                            <li>
-                                <a href="order-tracking.html" class="text-content">Track Order</a>
-                            </li>
-                            <li>
-                                <a href="wishlist.html" class="text-content">Your Wishlist</a>
-                            </li>
-                            <li>
-                                <a href="search.html" class="text-content">Search</a>
-                            </li>
-                            <li>
-                                <a href="faq.html" class="text-content">FAQ</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-xl-3 col-lg-4 col-sm-6">
-                    <div class="footer-title">
+                <div class="footer-title">
                         <h4>Contact Us</h4>
                     </div>
 
@@ -2104,45 +2038,36 @@
                                     <i data-feather="phone"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Hotline 24/7 :</h6>
-                                        <h5>+91 888 104 2340</h5>
+                                        <h5>01778055457</h5>
                                     </div>
                                 </div>
                             </li>
-
                             <li>
                                 <div class="footer-number">
                                     <i data-feather="mail"></i>
                                     <div class="contact-number">
                                         <h6 class="text-content">Email Address :</h6>
-                                        <h5>fastkart@hotmail.com</h5>
+                                        <h5>alugajor@gmail.com</h5>
                                     </div>
                                 </div>
-                            </li>
-
-                            <li class="social-app mb-0">
-                                <h5 class="mb-2 text-content">Download App :</h5>
-                                <ul>
-                                    <li class="mb-0">
-                                        <a href="https://play.google.com/store/apps" target="_blank">
-                                            <img src="https://themes.pixelstrap.com/fastka{{asset('/')}}front-end-assets/assets/images/playstore.svg" class="blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                    <li class="mb-0">
-                                        <a href="https://www.apple.com/in/app-store/" target="_blank">
-                                            <img src="https://themes.pixelstrap.com/fastka{{asset('/')}}front-end-assets/assets/images/appstore.svg" class="blur-up lazyload"
-                                                 alt="">
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         </ul>
                     </div>
                 </div>
+
+                <div class="col-xl-2 col-sm-3">
+                  
+
+                    <div class="footer-logo-contain">
+                            <h5>We are a one stop solution for your everyday consumables.We provide wide range of products starting from fresh produces to packed foods.</>
+                        </div>
+                </div>
+
+            
             </div>
         </div>
 
-        <div class="sub-footer section-small-space">
+        <!-- <div class="sub-footer section-small-space">
             <div class="reserve">
                 <h6 class="text-content">©2022 Fastkart All rights reserved</h6>
             </div>
@@ -2176,7 +2101,7 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div> -->
     </div>
 </footer>
 <!-- Footer Section End -->

@@ -58,9 +58,9 @@ Route::get('/customer/logout',[CustomerAuthController::class,'logout'])->name('c
 Route::get('/customer-dashboard',[CustomerAuthController::class,'dashboard'])->name('customer.dashboard');
 
 
-//Route::get('/', function () {
+// Route::get('/', function () {
 //    return view('welcome');
-//});
+// });
 Route::middleware(['customer'])->group(function (){
     Route::get('/customer-dashboard',[CustomerAuthController::class,'dashboard'])->name('customer.dashboard');
     Route::get('/customer/logout',[CustomerAuthController::class,'logout'])->name('customer.logout');

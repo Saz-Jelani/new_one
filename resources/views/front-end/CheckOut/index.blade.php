@@ -422,13 +422,13 @@
 
                                 <li>
                                     <h4>Shipping :</h4>
-                                    <h4 class="price">{{$shipping = 100}} Tk</h4>
+                                    <h4 class="price">{{$shipping = 50}} Tk</h4>
                                     <input type="hidden" value="{{ $shipping }}" name="shipping_total">
                                 </li>
 
                                 <li>
                                     <h4>Tax total :</h4>
-                                    <h4 class="price">{{ $tax = round($sum*0.15) }} Tk</h4>
+                                    <h4 class="price">{{ $tax = round($sum*0.05) }} Tk</h4>
                                     <input type="hidden" value="{{ $tax }}" name="tax_total">
                                 </li>
 

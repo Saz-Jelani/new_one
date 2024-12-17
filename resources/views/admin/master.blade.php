@@ -12,8 +12,8 @@
     <meta name="keywords"
           content="admin template, Fastkart admin template, dashboard template, flat admin template, responsive admin template, web app">
     <meta name="author" content="pixelstrap">
-    <link rel="icon" href="{{asset('/')}}admin-assets-index/assets/images/favicon.png" type="image/x-icon">
-    <link rel="shortcut icon" href="{{asset('/')}}admin-assets-index/assets/images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="{{asset('/')}}admin-assets-index/assets/images/525.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{{asset('/')}}admin-assets-index/assets/images/525.png" type="image/x-icon">
     <title>Fastkart - @yield('title')</title>
 
     <!-- Google font-->
@@ -214,7 +214,7 @@
             <div>
                 <div class="logo-wrapper logo-wrapper-center">
                     <a href="index.html" data-bs-original-title="" title="">
-                        <img class="img-fluid for-white" src="{{asset('/')}}admin-assets-index/assets/images/logo/full-white.png" alt="logo">
+                        <img class="img-fluid for-white" src="{{asset('/')}}admin-assets-index/assets/images/logo/525.png" alt="logo">
                     </a>
                     <div class="back-btn">
                         <i class="fa fa-angle-left"></i>
@@ -371,7 +371,7 @@
                                 </ul>
                             </li>
 
-                            <li class="sidebar-list">
+                            <!-- <li class="sidebar-list">
                                 <a class="linear-icon-link sidebar-link sidebar-title" href="javascript:void(0)">
                                     <i class="ri-price-tag-3-line"></i>
                                     <span>Coupons</span>
@@ -410,7 +410,7 @@
                                     <i class="ri-list-check"></i>
                                     <span>List Page</span>
                                 </a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
 

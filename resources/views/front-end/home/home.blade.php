@@ -57,14 +57,13 @@
                         </div>
                         <div class="home-detail p-center-left w-75">
                             <div>
-                                <h6>Exclusive offer <span>30% Off</span></h6>
-                                <h1 class="text-uppercase">StayYY home & delivered your <span class="daily">Daily
+                              
+                                <h1 class="text-uppercase">Stay home & delivered your <span class="daily">Daily
                                         Needs</span></h1>
                                 <p class="w-75 d-none d-sm-block">Vegetables contain many vitamins and minerals that are
                                     good for your health.</p>
                                 <button onclick="location.href = 'shop-left-sidebar.html';"
-                                        class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">Shop Now <i
-                                        class="fa-solid fa-right-long icon"></i></button>
+                                        class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">Shop Now</button>
                             </div>
                         </div>
                     </div>
@@ -78,12 +77,14 @@
                                      alt="">
                                 <div class="home-detail p-center-left home-p-sm w-75">
                                     <div>
-                                        <h2 class="mt-0 text-danger">45% <span class="discount text-title">OFF</span>
-                                        </h2>
-                                        <h3 class="theme-color">Nut Collection</h3>
+                                        <!-- <h2 class="mt-0 text-danger">45% <span class="discount text-title">OFF</span>
+                                        </h2> -->
+                                        <h3 class="theme-color">Nut Collections
+                                        </h3>
                                         <p class="w-75">We deliver organic vegetables & fruits</p>
-                                        <a href="shop-left-sidebar.html" class="shop-button">Shop Now <i
-                                                class="fa-solid fa-right-long"></i></a>
+                                        <button onclick="location.href = '{{asset('/')}}product-sub-category/52';"
+                                        class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">Shop Now
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -98,8 +99,10 @@
                                         <h3 class="mt-0 theme-color fw-bold">Healthy Food</h3>
                                         <h4 class="text-danger">Organic Market</h4>
                                         <p class="organic">Start daily shopping with </p>
-                                        <a href="shop-left-sidebar.html" class="shop-button">Shop Now <i
-                                                class="fa-solid fa-right-long"></i></a>
+                                        <button onclick="location.href = '{{asset('/')}}product-category/82';"
+                                        class="btn btn-animation mt-xxl-4 mt-2 home-button mend-auto">Shop Now
+                                        </button>
+                                     
                                     </div>
                                 </div>
                             </div>
@@ -124,7 +127,7 @@
                                 <h5>Hot Deals on New Items</h5>
                                 <h6 class="text-content">Daily Essentials Eggs & Dairy</h6>
                             </div>
-                            <a href="shop-left-sidebar.html" class="banner-button text-white">Shop Now <i
+                            <a href="product-detail/22" class="banner-button text-white">Shop Now <i
                                     class="fa-solid fa-right-long ms-2"></i></a>
                         </div>
                     </div>
@@ -332,7 +335,7 @@
                             </div>
                         </div>
 
-                        <div class="section-t-space">
+                        <!-- <div class="section-t-space">
                             <div class="category-menu">
                                 <h3>Trending Products</h3>
 
@@ -359,7 +362,7 @@
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
 
                     </div>
@@ -387,11 +390,11 @@
                                         <div class="col-12 px-0">
                                             <div class="product-box">
                                                 <div class="product-image">
-                                                    <a href="product-left-thumbnail.html">
+                                                    <a href="{{route('product-detail', ['id' => $product->id])}}">
                                                         <img src="{{asset($product->image)}}"
                                                              class="img-fluid blur-up lazyload" alt="">
                                                     </a>
-                                                    <ul class="product-option">
+                                                    <!-- <ul class="product-option">
                                                         <li data-bs-toggle="tooltip" data-bs-placement="top" title="View">
                                                             <a href="javascript:void(0)" data-bs-toggle="modal"
                                                                data-bs-target="#view">
@@ -412,7 +415,7 @@
                                                                 <i data-feather="heart"></i>
                                                             </a>
                                                         </li>
-                                                    </ul>
+                                                    </ul> -->
                                                 </div>
                                                 <div class="product-detail">
                                                     <a href="product-left-thumbnail.html">
@@ -446,7 +449,7 @@
                                                         <h6 class="theme-color">In Stock</h6>
                                                     </div>
 
-                                                    <div class="add-to-cart-box">
+                                                    <!-- <div class="add-to-cart-box">
                                                         <button class="btn btn-add-cart addcart-button">Add
                                                             <span class="add-icon">
                                                             <i class="fa-solid fa-plus"></i>
@@ -466,7 +469,7 @@
                                                                 </button>
                                                             </div>
                                                         </div>
-                                                    </div>
+                                                    </div> -->
                                                 </div>
                                             </div>
                                         </div>
@@ -495,7 +498,7 @@
 
                     <div class="category-slider-2 product-wrapper no-arrow">
                         <div>
-                            <a href="shop-left-sidebar.html" class="category-box category-dark">
+                            <a href="{{asset('/')}}product-category/82" class="category-box category-dark">
                                 <div>
                                     <img src="https://themes.pixelstrap.com/fastkart/assets/svg/1/vegetable.svg" class="blur-up lazyload" alt="">
                                     <h5>Vegetables & Fruit</h5>
@@ -599,11 +602,18 @@
                             <img src="{{asset('/')}}front-end-assets/assets/images/vegetable/banner/15.jpg" class="bg-img blur-up lazyload" alt="">
                             <div class="banner-details p-center p-4 text-white text-center">
                                 <div>
-                                    <h3 class="lh-base fw-bold offer-text">Get $3 Cashback! Min Order of $30</h3>
-                                    <h6 class="coupon-code">Use Code : GROCERY1920</h6>
-                                </div>
-                            </div>
+                                    <h3 class="lh-base fw-bold offer-text">Get Fresh Fruits In This Summer</h3>
+                                    <h6 class="coupon-code">Discount up to 33%</h6>
+                                    <div>
+                            <button onclick="location.href = 'shop-left-sidebar.html';"
+                                            class="btn btn-animation btn-sm mx-auto mt-sm-3 mt-2">Shop Now </button>
                         </div>
+                                </div>
+                            
+                            </div>
+                         
+                        </div>
+                  
                     </div>
 
                     <div class="section-t-space section-b-space">
@@ -627,13 +637,13 @@
                             </div>
 
                             <div class="col-xxl-4 col-xl-12 col-md-5">
-                                <a href="shop-left-sidebar.html" class="banner-contain hover-effect h-100">
+                                <a href="{{asset('/')}}product-sub-category/31" class="banner-contain hover-effect h-100">
                                     <img src="{{asset('/')}}front-end-assets/assets/images/vegetable/banner/13.jpg" class="bg-img blur-up lazyload"
                                          alt="">
                                     <div class="banner-details p-center-left p-4 h-100">
                                         <div>
                                             <h2 class="text-kaushan fw-normal text-danger">20% Off</h2>
-                                            <h3 class="mt-2 mb-2 theme-color">SUMMRY</h3>
+                                            <h3 class="mt-2 mb-2 theme-color">SUMMR</h3>
                                             <h3 class="fw-normal product-name text-title">Product</h3>
                                         </div>
                                     </div>
@@ -643,7 +653,7 @@
                     </div>
 
                     <div class="title d-block">
-                        <div>
+                        <!-- <div>
                             <h2>Our best Seller</h2>
                             <span class="title-leaf">
                                 <svg class="icon-width">
@@ -894,7 +904,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="section-t-space">
                         <div class="banner-contain hover-effect">
@@ -912,7 +922,7 @@
                         </div>
                     </div>
 
-                    <div class="title section-t-space">
+                    <!-- <div class="title section-t-space">
                         <h2>Featured Blog</h2>
                         <span class="title-leaf">
                             <svg class="icon-width">
@@ -920,10 +930,10 @@
                             </svg>
                         </span>
                         <p>A virtual assistant collects the products from your list</p>
-                    </div>
+                    </div> -->
 
-                    <div class="slider-3-blog ratio_65 no-arrow product-wrapper">
-                        <div>
+                    <!-- <div class="slider-3-blog ratio_65 no-arrow product-wrapper">
+                        <!-- <div>
                             <div class="blog-box">
                                 <div class="blog-box-image">
                                     <a href="blog-detail.html" class="blog-image">
@@ -986,8 +996,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </div> -->
+                </div> -->
 
 
             </div>
@@ -999,7 +1009,7 @@
     <section class="newsletter-section section-b-space">
         <div class="container-fluid-lg">
             <div class="newsletter-box newsletter-box-2">
-                <div class="newsletter-contain py-5">
+                <!-- <div class="newsletter-contain py-5">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-xxl-4 col-lg-5 col-md-7 col-sm-9 offset-xxl-2 offset-md-1">
@@ -1019,7 +1029,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

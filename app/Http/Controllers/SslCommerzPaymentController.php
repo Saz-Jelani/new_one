@@ -8,11 +8,16 @@ use Cart;
 use DB;
 use Illuminate\Http\Request;
 use App\Library\SslCommerz\SslCommerzNotification;
+use App\Mail\OrderConfirmationMail;
 use Session;
+use Mail;
+use App\Models\Customer;
+
 
 class SslCommerzPaymentController extends Controller
 {
 
+    private $order, $customer, $orderDetail;
     public function exampleEasyCheckout()
     {
         return view('front-end.checkout.exampleEasycheckout');
@@ -100,6 +105,7 @@ class SslCommerzPaymentController extends Controller
             Cart::remove($item->rowId);
         }
 
+
         $sslc = new SslCommerzNotification();
         # initiate(Transaction Data , false: Redirect to SSLCOMMERZ gateway/ true: Show all the Payement gateway here )
         $payment_options = $sslc->makePayment($post_data, 'hosted');
@@ -184,19 +190,66 @@ class SslCommerzPaymentController extends Controller
 
     }
 
-    public function success(Request $request)
+    public function success(Request $request,)
     {
+        ini_set('memory_limit', '-1');
+
         Session::put('customer_id', $request->input('value_b'));
         Session::put('customer_name', $request->input('value_a'));
 
 
         echo "Transaction is Successful";
 
+        
+        //echo("==".$request->input('email'));exit;
+
+         /* Email Send */
+
+         $this->customer = Customer::find(Session::get('customer_id'));
+         $this->order = Order::find(Session::get('order_id'));
+
+         $this->order = new Order();
+         $this->order->customer_id       = $this->customer->id;
+        
+    
+
+         foreach(Cart::content() as $item)
+         {
+             $this->orderDetail = new OrderDetail();
+             $this->orderDetail->order_id        = $this->order->id;
+             $this->orderDetail->product_id      = $item->id;
+             $this->orderDetail->product_name    = $item->name;
+             $this->orderDetail->product_code    = $item->options->code;
+             $this->orderDetail->product_price   = $item->price;
+             $this->orderDetail->product_qty     = $item->qty;
+             $this->orderDetail->save();
+
+             Cart::remove($item->rowId);
+         }
+
+       
+
+        //  $title = 'Welcome to our website';
+        //  $body = 'Thank you for your order!';
+
+         $title  = $this->customer->name;
+         $body = $this->order->id;
+         Mail::to($this->customer->email)
+             ->send(new OrderConfirmationMail($title, $body));
+
+         /* Email Send */
+
+
+
         $tran_id = $request->input('tran_id');
         $amount = $request->input('amount');
         $currency = $request->input('currency');
 
         $sslc = new SslCommerzNotification();
+
+
+
+
 
         #Check order status in order tabel against the transaction id or order id.
         $order_details = DB::table('orders')
@@ -216,11 +269,14 @@ class SslCommerzPaymentController extends Controller
                     ->where('transaction_id', $tran_id)
                     ->update(['order_status' => 'Processing']);
 
+
                 echo "<br >Transaction is successfully Completed";
                 return redirect('/complete-order')
                     ->with('message', 'Congratulation ...
                 your order info post successfully. Please wait..
-                we contact with you soon.');
+                we contact with you soon .');
+                
+        
             }
         } else if ($order_details->order_status == 'Processing' || $order_details->order_status == 'Complete') {
             /*
@@ -230,15 +286,20 @@ class SslCommerzPaymentController extends Controller
             return redirect('/complete-order')
                 ->with('message', 'Congratulation ...
                 your order info post successfully. Please wait..
-                we contact with you soon.');
+                we contact with you soon .');
         } else {
             #That means something wrong happened. You can redirect customer to your product page.
             echo "Invalid Transaction";
             return redirect('/complete-order')
                 ->with('message', 'Congratulation ...
                 your order info post successfully. Please wait..
-                we contact with you soon.');
+                we contact with you soon .');
         }
+        
+        $title = 'Welcome to our website';
+        $body = 'Thank you for your order!';
+        Mail::to($this->customer->email)
+            ->send(new OrderConfirmationMail($title, $body));
 
 
     }
